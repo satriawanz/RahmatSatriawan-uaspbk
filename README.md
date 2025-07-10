@@ -1,29 +1,45 @@
-# pbk-final
+# UAS Pemrograman Berbasis Komponen (PBK)
 
-This template should help get you started developing with Vue 3 in Vite.
+Proyek ini dibuat sebagai tugas akhir UAS mata kuliah **Pemrograman Berbasis Komponen (PBK)**.  
+Aplikasi yang dikembangkan adalah **Sistem Booking Lapangan Badminton** berbasis web, menggunakan framework **Vue.js + Vite** dan backend dummy API menggunakan `json-server`.
 
-## Recommended IDE Setup
+---
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Nama
 
-## Customize configuration
+**Rahmat Satriawan**
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+---
 
-## Project Setup
+## Fitur Aplikasi
 
-```sh
-npm install
-```
+- ✅ Halaman Home dengan tampilan modern
+- ✅ Halaman Login dengan localStorage
+- ✅ Halaman Jadwal:
+  - Menampilkan daftar booking lapangan
+  - Menambahkan booking baru
+  - Menghapus booking
+- ✅ Terhubung ke REST API via `json-server`
+- ✅ State Management menggunakan **Pinia**
+- ✅ Styling profesional menggunakan **Tailwind CSS**
 
-### Compile and Hot-Reload for Development
+---
 
-```sh
-npm run dev
-```
+## Teknologi yang Digunakan
 
-### Compile and Minify for Production
+- [Vue.js 3](https://vuejs.org/)
+- [Vite](https://vitejs.dev/)
+- [Pinia](https://pinia.vuejs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Axios](https://axios-http.com/)
+- [json-server](https://github.com/typicode/json-server)
 
-```sh
-npm run build
-```
+---
+
+## 🛠️ Cara Menjalankan Project (Developer Mode)
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/satriawanz/RahmatSatriawan-uaspbk.git
+cd RahmatSatriawan-uaspbk
