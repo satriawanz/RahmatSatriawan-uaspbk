@@ -1,18 +1,20 @@
 <template>
-  <div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-100 to-blue-50 p-4">
-    <div class="bg-white shadow-md rounded-lg p-8 w-full max-w-md">
-      <h2 class="text-2xl font-bold mb-6 text-center text-blue-700">Login</h2>
-      <form @submit.prevent="handleLogin" class="flex flex-col gap-4">
+  <div class="min-h-screen bg-gradient-to-tr from-[#f9fafb] to-[#e2e8f0] flex items-center justify-center px-4">
+    <div class="bg-white/80 backdrop-blur-lg shadow-2xl rounded-xl p-10 w-full max-w-md transition duration-300">
+      <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">👤 Login</h2>
+
+      <form @submit.prevent="handleLogin" class="space-y-5">
         <input
-          type="text"
           v-model="username"
-          placeholder="Username"
-          class="border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-400"
+          type="text"
+          placeholder="Masukkan nama kamu"
+          class="w-full px-4 py-3 rounded-lg border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 text-gray-700"
           required
         />
+
         <button
           type="submit"
-          class="bg-blue-600 hover:bg-blue-700 text-white py-3 rounded font-semibold"
+          class="w-full py-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-lg transition duration-300"
         >
           Masuk
         </button>
@@ -25,8 +27,8 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 
-const router = useRouter()
 const username = ref('')
+const router = useRouter()
 
 function handleLogin() {
   if (username.value.trim()) {

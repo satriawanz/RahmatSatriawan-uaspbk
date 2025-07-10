@@ -1,38 +1,62 @@
 <template>
-  <div class="min-h-screen bg-gray-50 p-8">
-    <h2 class="text-3xl font-bold text-center text-blue-700 mb-8">Daftar Booking Lapangan</h2>
+  <div class="min-h-screen bg-gradient-to-br from-white to-blue-50 py-10 px-4">
+    <h2 class="text-4xl font-extrabold text-blue-700 text-center mb-6">
+      🗓️ Daftar Booking Lapangan
+    </h2>
 
     <!-- FORM -->
     <form @submit.prevent="handleSubmit" class="flex flex-wrap gap-4 justify-center mb-10">
-      <input v-model="tanggal" type="date" required class="p-3 border rounded w-[200px]" />
-      <input v-model="jam" type="text" placeholder="Jam (08:00 - 09:00)" required class="p-3 border rounded w-[200px]" />
-      <input v-model="user" type="text" placeholder="Nama" required class="p-3 border rounded w-[200px]" />
-      <button type="submit" class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded">
-        Tambah Booking
+      <input
+        v-model="tanggal"
+        type="date"
+        required
+        class="p-3 border rounded w-[200px] shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-300"
+      />
+      <input
+        v-model="jam"
+        type="text"
+        placeholder="Jam (08:00 - 09:00)"
+        required
+        class="p-3 border rounded w-[200px] shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-300"
+      />
+      <input
+        v-model="user"
+        type="text"
+        placeholder="Nama Pemesan"
+        required
+        class="p-3 border rounded w-[200px] shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-300"
+      />
+      <button
+        type="submit"
+        class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded shadow-md transition duration-300"
+      >
+        ➕ Tambah Booking
       </button>
     </form>
 
     <!-- LIST -->
-    <div class="max-w-4xl mx-auto bg-white shadow-md rounded p-6">
+    <div class="max-w-4xl mx-auto bg-white shadow-xl rounded-lg p-6 transition duration-300">
       <ul v-if="jadwalStore.data.length" class="divide-y">
         <li
           v-for="item in jadwalStore.data"
           :key="item.id"
-          class="py-4 flex justify-between items-center"
+          class="py-4 flex justify-between items-center hover:bg-gray-50 transition duration-300"
         >
           <div>
-            <p class="font-medium text-gray-800">{{ item.tanggal }} | {{ item.jam }}</p>
+            <p class="font-semibold text-gray-800">{{ item.tanggal }} | {{ item.jam }}</p>
             <p class="text-gray-500 text-sm">Pemesan: {{ item.user }}</p>
           </div>
           <button
             @click="handleDelete(item.id)"
-            class="text-sm text-red-600 hover:text-red-800"
+            class="text-sm text-red-600 hover:text-red-800 transition duration-300"
           >
-            Hapus
+            🗑️ Hapus
           </button>
         </li>
       </ul>
-      <p v-else class="text-center text-gray-500">Belum ada data booking</p>
+      <p v-else class="text-center text-gray-500 italic py-6">
+        Belum ada booking nih. Yuk, isi sekarang! 😁
+      </p>
     </div>
   </div>
 </template>
@@ -52,8 +76,7 @@ async function handleSubmit() {
     jam: jam.value,
     user: user.value
   }
-  console.log('Booking yang dikirim:', newBooking)
-  
+
   await jadwalStore.addBooking(newBooking)
   tanggal.value = ''
   jam.value = ''
