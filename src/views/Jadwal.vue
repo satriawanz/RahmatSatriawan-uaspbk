@@ -17,13 +17,21 @@
         required
         class="p-3 border rounded-lg w-[200px] shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400"
       />
-      <input
-        v-model="user"
-        type="text"
-        placeholder="Nama Pemesan"
+      <select
+        v-model="jam"
         required
         class="p-3 border rounded-lg w-[200px] shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400"
-      />
+      >
+        <option value="" disabled selected>Pilih Jam</option>
+        <option value="07:00 - 08:00">07:00 - 08:00</option>
+        <option value="08:00 - 09:00">08:00 - 09:00</option>
+        <option value="09:00 - 10:00">09:00 - 10:00</option>
+        <option value="10:00 - 11:00">10:00 - 11:00</option>
+        <option value="13:00 - 14:00">13:00 - 14:00</option>
+        <option value="14:00 - 15:00">14:00 - 15:00</option>
+        <option value="15:00 - 16:00">15:00 - 16:00</option>
+      </select>
+
       <button
         type="submit"
         class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg transition duration-300"
