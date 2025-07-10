@@ -26,13 +26,7 @@
         <option value="14:00 - 15:00">14:00 - 15:00</option>
         <option value="15:00 - 16:00">15:00 - 16:00</option>
       </select>
-      <input
-        v-model="user"
-        type="text"
-        placeholder="Nama Pemesan"
-        required
-        class="p-3 border rounded-lg w-[200px] shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400"
-      />
+      
       <input
         v-model="user"
         type="text"
