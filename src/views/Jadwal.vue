@@ -4,7 +4,7 @@
       🗓️ Daftar Booking Lapangan
     </h2>
 
-    <!-- FORM -->
+    
     <form @submit.prevent="handleSubmit" class="flex flex-wrap gap-4 justify-center mb-10">
       <input
         v-model="tanggal"
@@ -26,7 +26,7 @@
         <option value="14:00 - 15:00">14:00 - 15:00</option>
         <option value="15:00 - 16:00">15:00 - 16:00</option>
       </select>
-      
+
       <input
         v-model="user"
         type="text"
@@ -42,7 +42,7 @@
       </button>
     </form>
 
-    <!-- LIST -->
+
     <div class="max-w-4xl mx-auto bg-white shadow-xl rounded-lg p-6 transition duration-300">
       <ul v-if="jadwalStore.data.length" class="divide-y">
         <li

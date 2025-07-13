@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 flex flex-col items-center justify-center px-4 relative overflow-hidden text-white">
 
-    <!-- Typing animation -->
+    
     <h1 class="text-4xl md:text-6xl font-extrabold text-center mb-6 animate-typing overflow-hidden whitespace-nowrap border-r-4 border-white">
       Booking Lapangan Badminton 🏸
     </h1>
@@ -26,7 +26,7 @@
       </router-link>
     </div>
 
-    <!-- Animated background blur elements -->
+
     <div class="absolute top-[-80px] left-[-80px] w-60 h-60 bg-purple-500 opacity-30 rounded-full filter blur-3xl animate-pulse"></div>
     <div class="absolute bottom-[-80px] right-[-80px] w-60 h-60 bg-blue-400 opacity-30 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
   </div>
